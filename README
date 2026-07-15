@@ -1,0 +1,36 @@
+Arcanyx Biome Config
+================
+
+[![npm](https://img.shields.io/npm/v/@arcanyx/biome-config)](https://www.npmjs.com/package/@arcanyx/biome-config)
+[![CI](https://github.com/arcanyx-pub/biome-config/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arcanyx-pub/biome-config/actions/workflows/ci.yml)
+
+Shared Biome config for Arcanyx projects.
+
+Usage
+-----
+
+Install the config alongside Biome:
+
+    npm install --save-dev @arcanyx/biome-config @biomejs/biome
+
+Then extend it from your project's `biome.jsonc`:
+
+    {
+        "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+        "extends": ["@arcanyx/biome-config"]
+    }
+
+Releasing
+---------
+
+Publishing is automated via GitHub Actions using npm trusted publishing (OIDC).
+
+1. On a feature branch, run `just bump <patch|minor|major>` to bump the version
+   and commit. Include that commit in your normal PR.
+2. After the PR merges to `main`, run `just release` to tag the merged commit
+   as `v<version>` and push the tag.
+3. Pushing the tag triggers `.github/workflows/release.yml`, which runs the
+   tests and publishes to npm.
+
+One-time setup: on npmjs.com, configure the package's trusted publisher to
+point at this repository and the `release.yml` workflow.

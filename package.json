@@ -1,0 +1,35 @@
+{
+    "name": "@arcanyx/biome-config",
+    "type": "module",
+    "exports": {
+        ".": "./biome.jsonc"
+    },
+    "description": "Shared Biome config for Arcanyx projects",
+    "version": "0.1.0",
+    "files": [
+        "biome.jsonc"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arcanyx-pub/biome-config.git"
+    },
+    "keywords": [
+        "biome",
+        "typescript"
+    ],
+    "author": "Joe Dahlquist <joe@arcanyx.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/arcanyx-pub/biome-config/issues"
+    },
+    "homepage": "https://github.com/arcanyx-pub/biome-config#readme",
+    "scripts": {
+        "test": "bash scripts/test.sh"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.5.3"
+    }
+}
