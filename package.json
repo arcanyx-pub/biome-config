@@ -5,7 +5,7 @@
         ".": "./biome.jsonc"
     },
     "description": "Shared Biome config for Arcanyx projects",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "files": [
         "biome.jsonc"
     ],
