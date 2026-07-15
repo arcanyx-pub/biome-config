@@ -27,10 +27,10 @@ Publishing is automated via GitHub Actions using npm trusted publishing (OIDC).
 
 1. On a feature branch, run `just bump <patch|minor|major>` to bump the version
    and commit. Include that commit in your normal PR.
-2. After the PR merges to `main`, run `just release` to tag the merged commit
+2. After the PR merges to `main`, run `just publish` to tag the merged commit
    as `v<version>` and push the tag.
-3. Pushing the tag triggers `.github/workflows/release.yml`, which runs the
+3. Pushing the tag triggers `.github/workflows/publish.yml`, which runs the
    tests and publishes to npm.
 
 One-time setup: on npmjs.com, configure the package's trusted publisher to
-point at this repository and the `release.yml` workflow.
+point at this repository and the `publish.yml` workflow.

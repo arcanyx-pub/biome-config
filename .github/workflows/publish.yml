@@ -1,6 +1,6 @@
-name: Release
+name: Publish
 
-# Triggered by `just release`, which pushes a `v<version>` tag after the
+# Triggered by `just publish`, which pushes a `v<version>` tag after the
 # version-bump PR has merged to main.
 on:
   push:

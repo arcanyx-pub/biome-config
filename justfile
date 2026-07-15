@@ -17,7 +17,7 @@ pack-preview:
     npm pack --dry-run
 
 # Bump the version (patch|minor|major) and commit. Run on your feature branch;
-# the bump commit rides along in your normal PR. After merge, run `just release`.
+# the bump commit rides along in your normal PR. After merge, run `just publish`.
 bump level:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -34,16 +34,16 @@ bump level:
     git add package.json package-lock.json
     git commit -m "Release ${new_version}"
     echo "Bumped to ${new_version}. Push this branch, open a PR, and after it"
-    echo "merges to main run 'just release'."
+    echo "merges to main run 'just publish'."
 
 # Tag the current main commit as v<version> and push it, triggering the npm
 # publish workflow. Run after the version-bump PR has merged.
-release:
+publish:
     #!/usr/bin/env bash
     set -euo pipefail
     branch=$(git rev-parse --abbrev-ref HEAD)
     if [[ "$branch" != "main" ]]; then
-        echo "release must be run from main (currently on '$branch')" >&2
+        echo "publish must be run from main (currently on '$branch')" >&2
         exit 1
     fi
     if [[ -n "$(git status --porcelain)" ]]; then
@@ -58,4 +58,4 @@ release:
     fi
     git tag -a "$version" -m "$version"
     git push origin "$version"
-    echo "Pushed $version. The release workflow will publish to npm."
+    echo "Pushed $version. The publish workflow will publish to npm."
