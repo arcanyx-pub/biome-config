@@ -1,0 +1,9 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+    // Nested under the repo's own root config, so mark it non-root.
+    "root": false,
+    // Extends the shared config by relative path so the test validates the
+    // actual rule set. Packaging (the exports mapping) is checked separately
+    // by scripts/check-exports.mjs.
+    "extends": ["../../biome.jsonc"]
+}
