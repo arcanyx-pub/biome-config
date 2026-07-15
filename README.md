@@ -11,14 +11,18 @@ Usage
 
 Install the config alongside Biome:
 
-    npm install --save-dev @arcanyx/biome-config @biomejs/biome
+```sh
+npm install --save-dev @arcanyx/biome-config @biomejs/biome
+```
 
 Then extend it from your project's `biome.jsonc`:
 
-    {
-        "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
-        "extends": ["@arcanyx/biome-config"]
-    }
+```jsonc
+{
+    "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+    "extends": ["@arcanyx/biome-config"]
+}
+```
 
 Releasing
 ---------
