@@ -30,6 +30,6 @@
         "test": "bash scripts/test.sh"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.5.3"
+        "@biomejs/biome": "2.6.4"
     }
 }

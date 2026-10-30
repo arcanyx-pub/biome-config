@@ -1,5 +1,5 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+    "$schema": "https://biomejs.dev/schemas/2.6.4/schema.json",
     // Nested under the repo's own root config, so mark it non-root.
     "root": false,
     // Extends the shared config by relative path so the test validates the
